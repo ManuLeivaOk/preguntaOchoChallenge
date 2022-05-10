@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.formulario {
+    width: 95%;
+    margin: 0 auto;
+}
+
 .modal{
     position: absolute;
     background-color: rgb(0 0 0 / 0.92);
@@ -19,7 +25,11 @@
     height: 3rem;
 }
 
-.modalForm{
+.imgCerrarModal{
+    width: 100%;
+}
+
+.modalForm {
     max-width: 80rem;
     width: 40rem;
     transition-property: all;
@@ -28,9 +38,13 @@
     opacity: 0;
 }
 
-.formularioAnimar{
+.formularioAnimar {
     position: relative;
     opacity: 1;
+}
+
+.body .modal {
+    overflow: hidden;
 }
 
 textarea{

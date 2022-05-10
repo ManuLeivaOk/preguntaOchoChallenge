@@ -3,8 +3,8 @@ import Respuesta from "./Respuesta";
 
 const ParticipantesYRespuestas = ({ participantes, respuestas }) => {
   return (
-    <div className="container mx-auto flex mb-10">
-      <div className='w-4/12'>
+    <div className="container mx-auto md:flex mb-10">
+      <div className='md:w-4/12 w-11/12 mx-auto'>
         <h2 className="text-gray-800 text-lg md:text-2xl mt-6 text-center">
           Listado de participantes
         </h2>
@@ -12,7 +12,7 @@ const ParticipantesYRespuestas = ({ participantes, respuestas }) => {
             <Participante key={persona.id} persona={persona} />
           ))}
       </div>
-      <div className='w-8/12'>
+      <div className='md:w-8/12 w-11/12 mx-auto'>
         <h2 className="text-gray-800 text-lg md:text-2xl mt-6 text-center">
           Respuestas
         </h2>
