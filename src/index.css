@@ -4,7 +4,6 @@
 
 
 .formulario {
-    width: 95%;
     margin: 0 auto;
 }
 
@@ -27,11 +26,11 @@
 
 .imgCerrarModal{
     width: 100%;
+    border-style: none;
+    box-sizing: inherit;
 }
 
 .modalForm {
-    max-width: 80rem;
-    width: 40rem;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
@@ -54,3 +53,4 @@ textarea{
 .minAlto{
     height: 300px;
 }
+

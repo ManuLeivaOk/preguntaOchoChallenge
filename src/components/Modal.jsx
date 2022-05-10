@@ -60,21 +60,21 @@ const Modal = ({
         <img
           src={close}
           alt="imgCerrarModal"
-          className="imgCerrarModal"
+          className="imgCerrarModal cursor-pointer"
           onClick={ocultarModal}
         />
       </div>
-      <h2 className="text-center text-white font-bold text-xl md:text-3xl mt-6 uppercase">
+      <h2 className="text-center text-white font-bold text-xl md:text-xl mt-32 md:mt-16 uppercase">
         Responde a estas preguntas
       </h2>
-      <form
-        onSubmit={handleSubmit}
-        className={`modalForm formulario flex flex-col items-center text-center ${
-          animarModal ? "formularioAnimar" : ""
-        }`}
-      >
-        <div className="mt-8 flex-col justify-center mx-20 md:mx-0">
-          <label className="text-white md:uppercase">
+      <div className="mt-18 mx-5 ">
+        <form
+          onSubmit={handleSubmit}
+          className={`modalForm formulario flex flex-col items-center text-center ${
+            animarModal ? "formularioAnimar" : ""
+          }`}
+        >
+          <label className="text-white mt-10">
             ¿Cuál es la promesa más importante que te has hecho?
           </label>
           <textarea
@@ -83,9 +83,8 @@ const Modal = ({
             value={pregunta1}
             onChange={(e) => setPregunta1(e.target.value)}
           ></textarea>
-        </div>
-        <div className="mt-3 flex-col justify-center mx-20 md:mx-0">
-          <label className="text-white md:uppercase">
+
+          <label className="text-white mt-3">
             ¿Cuándo te diste cuenta de que habías entrado en la adultez?
           </label>
           <textarea
@@ -94,9 +93,8 @@ const Modal = ({
             value={pregunta2}
             onChange={(e) => setPregunta2(e.target.value)}
           ></textarea>
-        </div>
-        <div className="mt-3 flex-col justify-center mx-20 md:mx-0">
-          <label className="text-white md:uppercase">
+
+          <label className="text-white mt-3">
             ¿Con qué personaje de ficción te identificas más?
           </label>
           <textarea
@@ -105,9 +103,8 @@ const Modal = ({
             value={pregunta3}
             onChange={(e) => setPregunta3(e.target.value)}
           ></textarea>
-        </div>
-        <div className="mt-3 flex-col justify-center mx-20 md:mx-0">
-          <label className="text-white md:uppercase">
+
+          <label className="text-white mt-3">
             ¿Porqué estás pensando en contratar a Manuel Leiva para tu equipo?
           </label>
           <textarea
@@ -116,18 +113,19 @@ const Modal = ({
             value={pregunta4}
             onChange={(e) => setPregunta4(e.target.value)}
           ></textarea>
-        </div>
-        {mensaje ? (
-          <p className="bg-red-300 w-8/12 md:w-full text-center uppercase p-1 rounded">
-            Debes completar todos los campos
-          </p>
-        ) : null}
-        <input
-          value="Enviar"
-          type="submit"
-          className="bg-gray-300 p-2 w-8/12 md:w-full mt-4 uppercase font-bold cursor-pointer hover:bg-gray-400 transition-all"
-        />
-      </form>
+
+          {mensaje ? (
+            <p className="bg-red-300 w-8/12 md:w-full text-center uppercase p-1 rounded">
+              Debes completar todos los campos
+            </p>
+          ) : null}
+          <input
+            value="Enviar"
+            type="submit"
+            className="bg-gray-300 p-2 w-8/12 md:w-8/12 mt-4 uppercase font-bold cursor-pointer hover:bg-gray-400 transition-all"
+          />
+        </form>
+      </div>
     </div>
   );
 };
